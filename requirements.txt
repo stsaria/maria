@@ -1,0 +1,4 @@
+requests
+websocket
+msgpack-python
+websockets
