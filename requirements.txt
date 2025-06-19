@@ -2,3 +2,4 @@ requests
 websocket
 msgpack-python
 websockets
+term
