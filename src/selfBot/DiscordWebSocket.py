@@ -1,4 +1,5 @@
 import threading
+import traceback
 import typing
 
 import websockets
@@ -94,4 +95,5 @@ class DiscordWebSocket:
                             with open("aa.txt", mode="a") as f:
                                 f.write(f"< {json.dumps(data)}\n\n")
                     except:
+                        print(traceback.format_exc())
                         buffer = b""

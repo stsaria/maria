@@ -65,6 +65,9 @@ class ETFDecoder:
             return self._readByte()
         if tag == 98:
             return struct.unpack(">i", self._read(4))[0]
+        if tag == 100:
+            length = self._readUint16()
+            return self._decodeAtom(length)
         if tag == 109:
             length = self._readUint32()
             return self._read(length)

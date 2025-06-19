@@ -37,7 +37,7 @@ class AnalyzerForDiscord:
         path = None
         match self._platform:
             case "Windows":
-                path = os.path.isdir(os.getenv('LOCALAPPDATA')+"\\DiscordPTB\\")
+                path = os.getenv('LOCALAPPDATA')+"\\DiscordPTB\\"
             case "Linux":
                 path = "/usr/share/discord-ptb/"
         if not os.path.isdir(path):
@@ -51,7 +51,7 @@ class AnalyzerForDiscord:
         match self._platform:
             case "Windows":
                 for fOrD in os.listdir(basePath):
-                    if os.path.isfile(basePath+fOrD+"\\DiscordPTB.exe"):
+                    if os.path.isfile(basePath+"\\"+fOrD+"\\DiscordPTB.exe"):
                         path = basePath+fOrD
             case _:
                 path = basePath
